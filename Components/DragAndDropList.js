@@ -22,8 +22,7 @@ export default DragAndDropList = (props) => {
       style={{
         flexDirection: "row",
         width: props.containerWidth,
-        marginStart: "20%",
-        marginTop: "20%",
+        ...props.parentContainerStyle
       }}
     >
       <StateProvider

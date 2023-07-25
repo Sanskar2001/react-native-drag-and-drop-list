@@ -14,11 +14,26 @@ with npm
         
 
 
+## How to Use
+
+Take in consideration the following data passed to component DragAndDropList i.e. the array must be in form of key and value
+
+           const data = [
+            { key: 1, value:"Mango" },
+            { key: 2, value: "Orange" },
+            { key: 3, value: "Apple" },
+            { key: 4, value: "Banana" },
+            { key: 5, value: "Cherry" },
+            { key: 6, value: "Watermelon" },
+            { key: 7, value: "Grapes" },
+            { key: 8, value: "Pineapple" },
+            ]
 
 
-## API Reference
 
-#### Get all items
+## Props
+
+#### All the props accepted are as follows:
 
 
 | Name | Type     | Description                       |
@@ -29,6 +44,9 @@ with npm
 | `containerWidth`      | `number` | width of the container that contains draggable list and drop area|
 | `dropBoxStyle`      | `style` | style properties that need to be applied on the dropbox|
 | `listItemContainerStyle`      | `style` | style properties that need to be applied on the container containing all the list items|
+| `listItemContainerStyle`      | `style` | style properties that need to be applied on the container containing all the list items|
+| ` parentContainerStyle`      | `style` | style properties that need to be applied on the parent container containing both the list items and droppable area|
+
 
 
 
@@ -68,6 +86,12 @@ export default function App() {
             backgroundColor:"skyblue",
             width:"50%"
           }}
+           parentContainerStyle={
+            {
+              marginStart:100,
+              marginTop:100
+            }
+          }
 
           dropBoxTitle="Drop Here"
           dropBoxStyle={{
@@ -106,5 +130,5 @@ const styles = StyleSheet.create({
 
 ## Authors
 
-- [@Sanskar2001](https://github.com/Sanskar2001)
+- [Sanskar Atrey](https://github.com/Sanskar2001)
 
