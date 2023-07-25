@@ -1,6 +1,6 @@
 {
   "name": "react-native-drag-and-drop-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Drag and Drop List with Drop Box is an intuitive and user-friendly interface that allows users to easily organize and manage items by dragging them from a list and dropping them into a designated drop box.",
   "main": "index.js",
   "directories": {
