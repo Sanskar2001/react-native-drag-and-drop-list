@@ -31,6 +31,7 @@ export default DragAndDropList = (props) => {
         reducer={reducer}
       >
         <DnDList
+          dropBoxVisibleAfterDrop={props.dropBoxVisibleAfterDrop}
           data={props.data}
           onDrop={props.onDrop}
           listItemContainerStyle={props.listItemContainerStyle}
@@ -43,6 +44,7 @@ export default DragAndDropList = (props) => {
   );
 };
 
+// styled components 
 const styles = StyleSheet.create({
   defaultListItem: {
     backgroundColor: "white",
