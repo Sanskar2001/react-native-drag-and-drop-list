@@ -24,16 +24,28 @@ const Draggable = (props) => {
       },
       useNativeDriver: true,
       onPanResponderRelease: (e, gesture) => {
-        if (isDropArea(gesture)) {
+
+        if (props.dropBoxVisibleAfterDrop!==undefined && isDropArea(gesture) && props.dropBoxVisibleAfterDrop) {
+          console.log("here--->");
+          props.onDrop(props.item);
+          Animated.spring(pan, {
+            toValue: { x: 0, y: 0 },
+            friction:5,
+            useNativeDriver: true,
+          }).start();
+        }
+       else if (isDropArea(gesture)) {
           props.onDrop(props.item);
           setShowDraggable(false);
-        } else {
+        }
+        else {
           Animated.spring(pan, {
             toValue: { x: 0, y: 0 },
             friction: 5,
             useNativeDriver: true,
           }).start();
         }
+
       },
     })
   ).current;
@@ -81,6 +93,7 @@ const Draggable = (props) => {
 
 export default Draggable;
 
+// styled components 
 let styles = StyleSheet.create({
   box: {
     backgroundColor: "#0E86D4",
